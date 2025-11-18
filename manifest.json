@@ -3,9 +3,11 @@
     "name": "YouTube Addiction Reminder",
     "version": "1.0",
     "description": "Remind me what I've been up to on YouTube today.",
-    "//icons": {
-        "48": "TODO.png",
-        "128": "TODO.png"
+    "icons": {
+        "128": "icon128.png",
+        "64": "icon64.png",
+        "48": "icon48.png",
+        "32": "icon32.png"
     },
     "permissions": [
         "storage"
