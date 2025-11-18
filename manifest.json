@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Addiction Reminder",
+    "version": "1.0",
+    "description": "Remind me what I've been up to on YouTube today.",
+    "//icons": {
+        "48": "TODO.png",
+        "128": "TODO.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [ "*://www.youtube.com/*" ],
+            "js": [ "videopage.js" ],
+            "run_at": "document_end"
+        }
+    ]
+}
