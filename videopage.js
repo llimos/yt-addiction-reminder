@@ -1,3 +1,5 @@
+const browser = window.browser || window.chrome;
+
 function extractVarFromHtml(html, varName) {
     const regex = new RegExp(`var ${varName} = (.*?);(var|</script>)`);
     const match = html.match(regex);
@@ -128,6 +130,7 @@ async function renderInto(hostElement) {
         const container = document.createElement('div');
         container.id = 'yt-addiction-reminder-container';
         container.style.marginBottom = '16px';
+        container.style.cursor = 'default';
         hostElement.prepend(container);
         const mergeDays = new Date().getHours() < 5; // Merge yesterday into today if before 5am
         const header = document.createElement('h2');
@@ -155,6 +158,7 @@ async function renderInto(hostElement) {
         const list = document.createElement('ul');
         list.style.listStyleType = 'none';
         list.style.padding = '0';
+        list.style.marginTop = '8px';
         container.appendChild(list);
         for (const item of viewData.today) {
             list.appendChild(renderItem(item));
